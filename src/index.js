@@ -1,1 +1,3 @@
-console.log("\nOK");
+import { greet } from './helloWorld.js';
+
+greet();
