@@ -16,6 +16,10 @@
 	},
 	"homepage": "https://github.com/PercyPham/wedvn#readme",
 	"scripts": {
-		"start": "node src/index.js"
+		"start": "node src/index.js",
+		"test": "jest"
+	},
+	"devDependencies": {
+		"jest": "^24.9.0"
 	}
 }
