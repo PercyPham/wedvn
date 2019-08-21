@@ -17,6 +17,8 @@
 	"homepage": "https://github.com/PercyPham/wedvn#readme",
 	"scripts": {
 		"start": "node src/index.js",
+		"lint": "eslint --fix src",
+		"prettier": "prettier --write src/**/*.js",
 		"test:unit": "jest -c jest.unit.config.js",
 		"test:integration": "jest -c jest.integration.config.js",
 		"test:coverage": "jest --coverage"
@@ -25,7 +27,17 @@
 		"express": "^4.17.1"
 	},
 	"devDependencies": {
+		"eslint": "^6.1.0",
+		"eslint-config-airbnb": "^18.0.1",
+		"eslint-config-prettier": "^6.1.0",
+		"eslint-plugin-import": "^2.18.2",
+		"eslint-plugin-jest": "^22.15.1",
+		"eslint-plugin-jsx-a11y": "^6.2.3",
+		"eslint-plugin-prettier": "^3.1.0",
+		"eslint-plugin-react": "^7.14.3",
+		"eslint-plugin-react-hooks": "^1.7.0",
 		"jest": "^24.9.0",
+		"prettier": "^1.18.2",
 		"supertest": "^4.0.2"
 	}
 }

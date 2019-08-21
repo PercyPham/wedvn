@@ -1,1 +1,1 @@
-console.log("\nOK");
+console.log('\nOK'); // eslint-disable-line
