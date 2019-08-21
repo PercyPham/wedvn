@@ -17,7 +17,9 @@
 	"homepage": "https://github.com/PercyPham/wedvn#readme",
 	"scripts": {
 		"start": "node src/index.js",
-		"test": "jest"
+		"test:unit": "jest -c jest.unit.config.js",
+		"test:integration": "jest -c jest.integration.config.js",
+		"test:coverage": "jest --coverage"
 	},
 	"dependencies": {
 		"express": "^4.17.1"
