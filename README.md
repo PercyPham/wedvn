@@ -78,7 +78,25 @@ All test with coverage report (graphical result will be placed in `.coverage` fo
 npm run test:coverage
 ```
 
-# Notes
+## Convention
+
+### Commit Message
+
+This project follows [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/) to make commit messages.
+
+To comprehense it easily, here are some examples from [Semantic Commit Messages](https://seesparkbox.com/foundry/semantic_commit_messages):
+
+```
+chore: add Oyster build script
+docs: explain hat wobble
+feat: add beta sequence
+fix: remove broken confirmation message
+refactor: share logic between 4d3d3d3 and flarhgunnstow
+style: convert tabs to spaces
+test: ensure Tayne retains clothing
+```
+
+## Notes
 
 For upgrading node version, need to update version in two files:
 
