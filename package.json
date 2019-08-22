@@ -2,19 +2,11 @@
 	"name": "wedvn",
 	"version": "0.0.1",
 	"description": "Wed.vn",
-	"author": "Hung Pham <hungpom.percy@gmail.com>",
+	"author": "Hung Pham <hungpm.percy@gmail.com>",
 	"license": "UNLICENSED",
 	"engines": {
 		"node": "12.8.1"
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/PercyPham/wedvn.git"
-	},
-	"bugs": {
-		"url": "https://github.com/PercyPham/wedvn/issues"
-	},
-	"homepage": "https://github.com/PercyPham/wedvn#readme",
 	"scripts": {
 		"start": "node src/index.js",
 		"lint": "eslint --fix src",
@@ -62,5 +54,13 @@
 		"extends": [
 			"@commitlint/config-conventional"
 		]
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/PercyPham/wedvn.git"
+	},
+	"bugs": {
+		"url": "https://github.com/PercyPham/wedvn/issues"
+	},
+	"homepage": "https://github.com/PercyPham/wedvn#readme"
 }
