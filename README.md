@@ -21,19 +21,19 @@ npm start
 Build Image
 
 ```
-docker build -t wedvn .
+docker build -t hungpmpercy/wedvn .
 ```
 
 Run container
 
 ```
-docker run --rm -it wedvn
+docker run --rm -it hungpmpercy/wedvn
 ```
 
 Currently, the default command for docker to run is `npm start`, so if we want to run another command, then do it like this:
 
 ```
-docker run --rm -it wedvn <override-command>
+docker run --rm -it hungpmpercy/wedvn <override-command>
 ```
 
 Example: `docker run --rm -it wedvn npm run test:unit`
