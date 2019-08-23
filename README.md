@@ -9,7 +9,7 @@ Wed.vn helps spouses-to-be to connect with web designers, who can make beautiful
 Must install:
 
 - Docker ([mac](https://docs.docker.com/docker-for-mac/install/) or [window](https://docs.docker.com/docker-for-windows/install/))
-- Node (version 12.8.1)
+- Node (version >=12.8.1 <13.0.0)
 
 _Note: recommend using `nvm` to easily switch between `node` versions._
 
