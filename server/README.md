@@ -81,3 +81,16 @@ All test with coverage report (visual result will be placed in `.coverage` folde
 ```
 npm run test:coverage
 ```
+
+## Coding
+
+### Check Before Commit
+
+Run prettier and lint-fix before any commit to format code:
+
+```
+npm run prettier
+npm run lint-fix
+```
+
+Check commit message, make sure it complies with [Commit Convention](https://www.conventionalcommits.org/en/v1.0.0-beta.2/).

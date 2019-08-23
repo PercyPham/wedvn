@@ -10,4 +10,5 @@ before_install:
   - docker build -t hungpmpercy/wedvn-server ./server
 
 script:
+  - docker run hungpmpercy/wedvn-server npm run lint
   - docker run -e CI=true hungpmpercy/wedvn-server npm run test:coverage
