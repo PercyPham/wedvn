@@ -1,7 +1,7 @@
 {
-	"name": "wedvn",
+	"name": "wedvn-server",
 	"version": "0.0.1",
-	"description": "Wed.vn",
+	"description": "Server code for Wed.vn",
 	"author": "Hung Pham <hungpm.percy@gmail.com>",
 	"license": "UNLICENSED",
 	"engines": {
