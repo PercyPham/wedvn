@@ -1,15 +1,16 @@
 {
-	"name": "wedvn",
+	"name": "wedvn-server",
 	"version": "0.0.1",
-	"description": "Wed.vn",
+	"description": "Server code for Wed.vn",
 	"author": "Hung Pham <hungpm.percy@gmail.com>",
 	"license": "UNLICENSED",
 	"engines": {
-		"node": "12.8.1"
+		"node": ">=12.8.1 <13.0.0"
 	},
 	"scripts": {
 		"start": "node src/index.js",
-		"lint": "eslint --fix src",
+		"lint": "eslint src",
+		"lint-fix": "eslint --fix src",
 		"prettier": "prettier --write src/**/*.js",
 		"test:unit": "jest -c jest.unit.config.js",
 		"test:integration": "jest -c jest.integration.config.js",
