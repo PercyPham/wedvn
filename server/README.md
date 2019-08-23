@@ -1,33 +1,37 @@
-# wedvn
+# wedvn-server
 
-Use VSCode to develop this project
+This is server code for wedvn project.
 
-Things to install before use:
+## Before Coding
 
-- Node (12.8.1 - can use nvm to control node version)
-- Docker
-
-## Run project
-
-Start project
+Install all dependencies to enable auto check commit:
 
 ```
 npm install
-npm start
 ```
 
-## Run with docker
+## Run Project
 
-Build Image
+There are two places to run code during development:
+
+- Current machine (for fast development)
+- In Docker (validate docker build)
+
+### For current machine, run:
 
 ```
-docker build -t hungpmpercy/wedvn .
+npm install
+npm run start
 ```
 
-Run container
+### For Docker:
 
-```
-docker run --rm -it hungpmpercy/wedvn
+```bash
+# Build image
+docker build -t hungpmpercy/wedvn-server .
+
+# Run container
+docker run --rm -it hungpmpercy/wedvn-server
 ```
 
 Currently, the default command for docker to run is `npm start`, so if we want to run another command, then do it like this:
@@ -72,33 +76,8 @@ Integration test
 npm run test:integration
 ```
 
-All test with coverage report (graphical result will be placed in `.coverage` folder at root)
+All test with coverage report (visual result will be placed in `.coverage` folder at same level with this README file)
 
 ```
 npm run test:coverage
 ```
-
-## Convention
-
-### Commit Message
-
-This project follows [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/) to make commit messages.
-
-To comprehense it easily, here are some examples from [Semantic Commit Messages](https://seesparkbox.com/foundry/semantic_commit_messages):
-
-```
-chore: add Oyster build script
-docs: explain hat wobble
-feat: add beta sequence
-fix: remove broken confirmation message
-refactor: share logic between 4d3d3d3 and flarhgunnstow
-style: convert tabs to spaces
-test: ensure Tayne retains clothing
-```
-
-## Notes
-
-For upgrading node version, need to update version in two files:
-
-- Dockerfile
-- package.json
