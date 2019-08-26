@@ -10,6 +10,7 @@ Must install:
 
 - Docker ([mac](https://docs.docker.com/docker-for-mac/install/) or [window](https://docs.docker.com/docker-for-windows/install/))
 - Node (version >=12.8.1 <13.0.0)
+- Git
 
 _Note: recommend using `nvm` to easily switch between `node` versions._
 
@@ -30,6 +31,42 @@ Open new `workspace` with file [wedvn.code-workspace](./wedvn.code-workspace) lo
 ```bash
 # Tell git you want your own independent version of the file
 git update-index --skip-worktree wedvn.code-workspace
+```
+
+## Develop Project
+
+Clone project:
+
+```
+git clone git@github.com:PercyPham/wedvn.git wedvn
+```
+
+Install dependencies:
+
+```
+cd wedvn
+cd server && npm install && cd ..
+```
+
+Run Dev environment:
+
+```bash
+# on Mac or Linux
+./dev.sh
+
+# on Windows
+dev
+```
+
+If there are changes in source code and `dev` command doesn't affect. Example: changes in `server/package.json`.<br>
+Add `--build` to rebuild docker images:
+
+```bash
+# on Mac or Linux
+./dev.sh --build
+
+# on Windows
+dev --build
 ```
 
 ## Conventions
