@@ -7,8 +7,15 @@ services:
   - docker
 
 before_install:
+  - openssl aes-256-cbc -K $encrypted_0c35eebf403c_key -iv $encrypted_0c35eebf403c_iv -in ./deploy/.travis/travis-id_rsa.enc -out ./deploy/.travis/travis-id_rsa -d
   - docker build -t hungpmpercy/wedvn-server ./server
 
 script:
   - docker run hungpmpercy/wedvn-server npm run lint
   - docker run -e CI=true hungpmpercy/wedvn-server npm run test:coverage
+
+deploy:
+  provider: script
+  script: bash ./deploy/deploy.sh
+  on:
+    branch: prod
