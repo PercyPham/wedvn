@@ -88,3 +88,40 @@ Host    Type           Value           TTL
 @       A (Address)    <droplet-ip>    3600
 www     A (Address)    <droplet-ip>    3600
 ```
+
+### Get Project Running
+
+#### Get project
+
+Setup SSH for Github
+
+- Follow [this article](https://help.github.com/en/enterprise/2.16/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to setup ssh to connect github.
+
+Clone project:
+
+```
+cd ~
+git clone git@github.com:PercyPham/wedvn.git wedvn
+cd wedvn
+```
+
+#### Setup SSL
+
+This setup follows instructions from [this article](https://medium.com/@pentacent/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71) to setup SSL.
+
+Init dummy certificate by running this script:
+
+```bash
+# These scripts are executed at the root of project
+chmod +x ./deploy/init-letsencrypt.sh
+sudo ./deploy/init-letsencrypt.sh
+```
+
+_Note: Actually, the script above will auto do `docker-compose up` to start server after generating dummy certificate._
+
+#### Run project
+
+```bash
+# At root of project
+docker-compose up
+```
