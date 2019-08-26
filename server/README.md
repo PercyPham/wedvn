@@ -37,10 +37,10 @@ docker run --rm -it hungpmpercy/wedvn-server
 Currently, the default command for docker to run is `npm start`, so if we want to run another command, then do it like this:
 
 ```
-docker run --rm -it hungpmpercy/wedvn <override-command>
+docker run --rm -it hungpmpercy/wedvn-server <override-command>
 ```
 
-Example: `docker run --rm -it wedvn npm run test:unit`
+Example: `docker run --rm -it wedvn-server npm run test:unit`
 
 ## Test
 
