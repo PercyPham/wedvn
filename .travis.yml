@@ -16,6 +16,7 @@ script:
   - docker run -e CI=true hungpmpercy/wedvn-server npm run test:coverage
 
 deploy:
+  skip_cleanup: true
   provider: script
   script: bash ./deploy/deploy.sh
   on:
