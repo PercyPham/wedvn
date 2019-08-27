@@ -1,84 +1,75 @@
-# wedvn
+# Wed.vn
 
-Use VSCode to develop this project
+Wed.vn helps spouses-to-be to connect with web designers, who can make beautiful presentations for their wedding.
 
-Things to install before use:
+## Setup Coding Environment
 
-- Node (12.8.1 - can use nvm to control node version)
-- Docker
+### Environment
 
-## Run project
+Must install:
 
-Start project
+- Docker ([mac](https://docs.docker.com/docker-for-mac/install/) or [window](https://docs.docker.com/docker-for-windows/install/))
+- Node (version >=12.8.1 <13.0.0)
+- Git
 
-```
-npm install
-npm start
-```
+_Note: recommend using `nvm` to easily switch between `node` versions._
 
-## Run with docker
+### IDE
 
-Build Image
+Use [VSCode](https://code.visualstudio.com/) to develop this project.
 
-```
-docker build -t hungpmpercy/wedvn .
-```
+Install these extensions to VSCode:
 
-Run container
+- [npm](https://marketplace.visualstudio.com/items?itemName=eg2.vscode-npm-script)
+- [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+- [Eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [GitLens - Git supercharged](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 
-```
-docker run --rm -it hungpmpercy/wedvn
-```
+Open new `workspace` with file [wedvn.code-workspace](./wedvn.code-workspace) located in root of project. After that, tell git to ignore all changes in this file from now on:
 
-Currently, the default command for docker to run is `npm start`, so if we want to run another command, then do it like this:
-
-```
-docker run --rm -it hungpmpercy/wedvn <override-command>
+```bash
+# Tell git you want your own independent version of the file
+git update-index --skip-worktree wedvn.code-workspace
 ```
 
-Example: `docker run --rm -it wedvn npm run test:unit`
+## Develop Project
 
-## Test
-
-### Write tests
-
-All test file must be placed under `__tests__` folder next to its tested function file
-
-Unit test file name must be end with `.unit.test.js`
-
-Integration test file name must be end with `.int.test.js`
-
-For example:
+Clone project:
 
 ```
-utilFunc
-├── __tests__
-│   └── utilFunc.unit.test.js
-├── utilFunc.js
-└── index.js
+git clone git@github.com:PercyPham/wedvn.git wedvn
 ```
 
-### Run tests
-
-Unit test
+Install dependencies:
 
 ```
-npm run test:unit
+cd wedvn
+cd server && npm install && cd ..
 ```
 
-Integration test
+Run Dev environment:
 
-```
-npm run test:integration
-```
+```bash
+# on Mac or Linux
+./dev.sh
 
-All test with coverage report (graphical result will be placed in `.coverage` folder at root)
-
-```
-npm run test:coverage
+# on Windows
+dev
 ```
 
-## Convention
+If there are changes in source code and `dev` command doesn't affect. Example: changes in `server/package.json`.<br>
+Add `--build` to rebuild docker images:
+
+```bash
+# on Mac or Linux
+./dev.sh --build
+
+# on Windows
+dev --build
+```
+
+## Conventions
 
 ### Commit Message
 
@@ -95,10 +86,3 @@ refactor: share logic between 4d3d3d3 and flarhgunnstow
 style: convert tabs to spaces
 test: ensure Tayne retains clothing
 ```
-
-## Notes
-
-For upgrading node version, need to update version in two files:
-
-- Dockerfile
-- package.json

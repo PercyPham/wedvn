@@ -1,8 +1,10 @@
 FROM node:12.8.1-alpine
-WORKDIR /wedvn
+WORKDIR /wedvn-server
 
 COPY ./.npmrc ./package*.json ./
 RUN npm install
 
 COPY . .
-CMD ["npm", "run", "start"]
+CMD ["npm", "start"]
+
+EXPOSE 5000

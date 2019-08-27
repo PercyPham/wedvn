@@ -1,6 +1,1 @@
-# modules
-node_modules
-
-# test coverage
-.coverage
-
+deploy-key-id_rsa
