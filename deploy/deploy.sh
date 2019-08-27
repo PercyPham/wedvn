@@ -13,6 +13,10 @@ echo "Deploying on $PROD_IP"
 
 ssh hungpmpercy@$PROD_IP <<EOF
   cd wedvn
-  git fetch && git pull
+  git fetch
+  git branch -D master
+  git checkout master
+  git branch -D prod
+  git checkout prod
   docker-compose up -d --build
 EOF
