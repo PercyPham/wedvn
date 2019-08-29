@@ -6,8 +6,8 @@ if [ -z `ssh-keygen -F $PROD_IP` ]; then
 fi
 
 eval "$(ssh-agent -s)"
-chmod 600 deploy-key-id_rsa
-ssh-add deploy-key-id_rsa
+chmod 600 deploy/.travis/deploy-key-id_rsa
+ssh-add deploy/.travis/deploy-key-id_rsa
 
 echo "Deploying on $PROD_IP"
 
