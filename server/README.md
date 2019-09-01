@@ -10,37 +10,9 @@ Install all dependencies to enable auto check commit:
 npm install
 ```
 
-## Run Project
+## Develop Project
 
-There are two places to run code during development:
-
-- Current machine (for fast development)
-- In Docker (validate docker build)
-
-### For current machine, run:
-
-```
-npm install
-npm run start
-```
-
-### For Docker:
-
-```bash
-# Build image
-docker build -t hungpmpercy/wedvn-server .
-
-# Run container
-docker run --rm -it hungpmpercy/wedvn-server
-```
-
-Currently, the default command for docker to run is `npm start`, so if we want to run another command, then do it like this:
-
-```
-docker run --rm -it hungpmpercy/wedvn-server <override-command>
-```
-
-Example: `docker run --rm -it wedvn-server npm run test:unit`
+Refer to [README.md](../README.md) at the root of project.
 
 ## Test
 
