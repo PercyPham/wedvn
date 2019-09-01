@@ -19,4 +19,5 @@ ssh hungpmpercy@$PROD_IP <<EOF
   git branch -D prod
   git checkout prod
   docker-compose up -d --build
+  docker system prune -f
 EOF
