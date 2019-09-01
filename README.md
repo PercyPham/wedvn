@@ -69,6 +69,30 @@ Add `--build` to rebuild docker images:
 dev --build
 ```
 
+Interact with running docker container in `dev` time:<br>
+Get the name shown in `dev` terminal (ex: `wedvn-server_1`). Open new terminal and run:
+
+```bash
+# on Mac or Linux
+./interact.sh <shown-name>
+
+# on Windows
+interact <shown-name>
+```
+
+- Example (terminal): `./interact.sh wedvn-server_1`
+- Exit out of interaction: `exit`
+
+Clean after a development session:
+
+```bash
+# on Mac or Linux
+./clean.sh
+
+# on Windows
+clean
+```
+
 ## Conventions
 
 ### Commit Message
